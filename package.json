@@ -1,0 +1,11 @@
+{
+  "name": "joe-mama-bot",
+  "version": "1.0.0",
+  "description": "A simple discord bot that outputs \"Joe Mama\" whenever someone asks who Joe is. This was created to test Docker deployment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yorrick Bakker",
+  "license": "MIT"
+}
