@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  discord-bot:
+    entrypoint: ['npm', 'run', 'dev']
+    build: .
+    image: ysbakker/joe-mama-bot
+    volumes:
+      - .:/usr/src/app

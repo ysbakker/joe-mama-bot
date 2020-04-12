@@ -5,13 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "npx pm2 start ./index.js --no-daemon --name \"Joe Mama Discord Bot\"",
-    "dev": "npx nodemon ./index.js"
+    "dev": "npx pm2 start ./index.js --no-daemon --name \"Joe Mama Discord Bot\" --watch"
   },
   "author": "Yorrick Bakker",
   "license": "MIT",
-  "devDependencies": {
-    "nodemon": "^2.0.3"
-  },
+  "devDependencies": {},
   "dependencies": {
     "discord.js": "^12.1.1",
     "dotenv": "^8.2.0",

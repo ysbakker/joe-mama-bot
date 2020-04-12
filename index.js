@@ -27,9 +27,10 @@ const triggers = [
   'wie is joe',
 ];
 
-client.on('message', async ({ content, channel }) => {
+client.on('message', async ({ content, channel, author }) => {
   const msg = content.trim().toLowerCase();
-  if (triggers.includes(msg))
+  if (triggers.includes(msg)) {
+    console.log(`Trigger message received ${author.username}`);
     channel.send(
       `\`\`\`${await Promise.all(
         'J\no\ne\nm\na\nm\na'
@@ -37,6 +38,7 @@ client.on('message', async ({ content, channel }) => {
           .map((letter) => asciiText(letter, { font: 'isometric1' }))
       )}\`\`\``
     );
+  }
 });
 
 client.login(process.env.DISCORD_TOKEN);
