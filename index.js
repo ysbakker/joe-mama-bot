@@ -30,12 +30,12 @@ const triggers = [
 client.on('message', async ({ content, channel, author }) => {
   const msg = content.trim().toLowerCase();
   if (triggers.includes(msg)) {
-    console.log(`Trigger message received ${author.username}`);
+    console.log(`Trigger message received by ${author.username}`);
     channel.send(
       `\`\`\`${await Promise.all(
         'J\no\ne\nm\na\nm\na'
           .split()
-          .map((letter) => asciiText(letter, { font: 'isometric1' }))
+          .map((letter) => asciiText(letter, { font: 'Isometric1' }))
       )}\`\`\``
     );
   }
