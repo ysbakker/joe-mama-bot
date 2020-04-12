@@ -16,4 +16,5 @@ cd docker-projects
 echo 'unpacking archive...'
 tar -xzf $BASE.tar.gz && rm $BASE.tar.gz
 docker-compose -f $BASE/docker-compose.prod.yml up -d
+docker system prune -f
 "

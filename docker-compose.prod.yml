@@ -1,4 +1,4 @@
-version: '3.7'
+version: '2.4'
 
 services:
   discord-bot:
@@ -6,3 +6,4 @@ services:
     image: ysbakker/joe-mama-bot
     env_file:
       - ./.env
+    mem_limit: 100m
