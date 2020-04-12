@@ -5,6 +5,6 @@ ENV NODE_ENV=production
 
 COPY . /usr/src/app
 WORKDIR /usr/src/app
-RUN npm install --only=production
+RUN npm install
 
 ENTRYPOINT [ "npm", "start" ]
