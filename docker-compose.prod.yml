@@ -2,6 +2,7 @@ version: '2.4'
 
 services:
   discord-bot:
+    restart: always
     build: .
     image: ysbakker/joe-mama-bot
     env_file:
