@@ -32,11 +32,10 @@ client.on('message', async ({ content, channel, author }) => {
   if (triggers.includes(msg)) {
     console.log(`Trigger message received by ${author.username}`);
     channel.send(
-      `\`\`\`${await Promise.all(
-        'J\no\ne\nm\na\nm\na'
-          .split()
-          .map((letter) => asciiText(letter, { font: 'Isometric1' }))
-      )}\`\`\``
+      `\`\`\`
+      ${await asciiText('Joe', { font: 'Weird' })}
+      ${await asciiText('Mama', { font: 'Weird' })}
+      \`\`\``
     );
   }
 });
