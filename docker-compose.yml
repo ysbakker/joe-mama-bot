@@ -6,4 +6,4 @@ services:
     build: .
     image: ysbakker/joe-mama-bot
     volumes:
-      - .:/usr/src/app
+      - .:/home/node/app

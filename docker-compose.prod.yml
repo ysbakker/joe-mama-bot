@@ -7,4 +7,4 @@ services:
     image: ysbakker/joe-mama-bot
     env_file:
       - ./.env
-    mem_limit: 100m
+    mem_limit: 50m

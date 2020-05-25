@@ -4,8 +4,7 @@
   "description": "A simple discord bot that outputs \"Joe Mama\" whenever someone asks who Joe is. This was created to test Docker deployment",
   "main": "index.js",
   "scripts": {
-    "start": "npx pm2 start ./index.js --no-daemon --name \"Joe Mama Discord Bot\"",
-    "dev": "npx pm2 start ./index.js --no-daemon --name \"Joe Mama Discord Bot\" --watch"
+    "dev": "pm2 start ./index.js --no-daemon --name \"Joe Mama Discord Bot\" --watch"
   },
   "author": "Yorrick Bakker",
   "license": "MIT",
