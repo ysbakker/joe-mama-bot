@@ -19,24 +19,26 @@ client.on('ready', () => {
 });
 
 const triggers = [
-  "who's joe?",
-  'whos joe?',
-  "who's joe",
+  'who\'s joe',
   'whos joe',
-  'wie is joe?',
   'wie is joe',
+  'who is joe'
 ];
 
 client.on('message', async ({ content, channel, author }) => {
   const msg = content.trim().toLowerCase();
-  if (triggers.includes(msg)) {
+  if (triggers.includes(msg) || triggers.includes(msg.slice(0, -1))) {
     console.log(`Trigger message received by ${author.username}`);
-    channel.send(
-      `\`\`\`
-      ${await asciiText('Joe', { font: 'Weird' })}
-      ${await asciiText('Mama', { font: 'Weird' })}
-      \`\`\``
-    );
+    if (author.username.toLowerCase().includes('daniel')) {
+      channel.send('Opkutten Daniël')
+    } else {
+      channel.send(
+        `\`\`\`
+        ${await asciiText('Joe', { font: 'Weird' })}
+        ${await asciiText('Mama', { font: 'Weird' })}
+        \`\`\``
+      );
+    }
   }
 });
 
